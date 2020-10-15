@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15%;
+    background: #132743;
+}
+
+.logo {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+.search {
+    width: 90%;
+    max-width: 600px;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
