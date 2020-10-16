@@ -1,16 +1,14 @@
 import React from "react";
 import styles from "./card.module.scss";
 
-const Card = () => {
+const Card = (props) => {
+  const { image, name } = props.card;
+
   return (
-    <article className={styles.item}>
-      <img
-        src="https://media.rawg.io/media/crop/600/400/games/ad2/ad2ffdf80ba993654f31da045bc02456.jpg"
-        className={styles.image}
-        alt="Game"
-      />
+    <article className={styles.item} key={name}>
+      <img src={image} className={styles.image} alt={name} />
       <section className={styles.info}>
-        <h3 className={styles.name}>Tom Raider</h3>
+        <h3 className={styles.name}>{name}</h3>
       </section>
     </article>
   );
