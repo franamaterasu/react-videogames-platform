@@ -1,0 +1,32 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #212121;
+  border-radius: 6px;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  margin-right: 30px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background: #bc0707;
+  }
+}
+
+.icon {
+  fill: #fff;
+  font-size: 29px;
+}
+
+.name {
+  color: #fff;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  margin: 9px 0 0 0;
+}
