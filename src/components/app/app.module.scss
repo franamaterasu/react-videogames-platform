@@ -11,3 +11,12 @@ html {
   width: 90%;
   max-width: 1000px;
 }
+
+.cards {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
