@@ -5,12 +5,12 @@ import styles from './list.module.scss';
 import Card from '../card';
 
 const List = props => {
-
     const {games} = props;
+
     return(
         <section className={styles.content}>
-            {games.map((game) => (
-                <Card name={game.name} image={game.image}/>
+            {games.map((game, index) => (
+                <Card game={game} />
             ))}
         </section>
     )

@@ -18,7 +18,7 @@ function App() {
   return (
     <section className={styles.main}>
       <Header />
-      {/*<List games={games}/>*/}
+      <List games={games}/>
     </section>
   );
 }
