@@ -3,7 +3,10 @@ import styles from "./header.module.scss";
 
 import Bubble from '../bubble';
 
-const Header = () => {
+const Header = props => {
+
+  const {handleChange} = props;
+
   return (
     <>
     <header className={styles.container}>
@@ -12,6 +15,7 @@ const Header = () => {
         className={styles.search}
         type="text"
         placeholder="Search news..."
+        onChange={handleChange}
       />
     </header>
     <section className={styles.genders}>

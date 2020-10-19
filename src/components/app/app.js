@@ -13,11 +13,17 @@ function App() {
     getDataFromApi().then(data => setGames(data));
   }, []);
 
-  console.log(games);
+  // Filtrado por nombre
+  const onHandleChange = e => {
+    let filterText = e.target.value;
+    let filteredGames = games.filter(game => game.name.toLowerCase().includes(filterText.toLowerCase()));
+
+    setGames(filteredGames);
+  }
 
   return (
     <section className={styles.main}>
-      <Header />
+      <Header handleChange={onHandleChange}/>
       <List games={games}/>
     </section>
   );
