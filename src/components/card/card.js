@@ -2,11 +2,7 @@ import React from "react";
 import styles from "./card.module.scss";
 
 const Card = props => {
-  //const { image, name } = props.card;
-  // const { onClick } = props;
-
- const {image, name} = props;
-
+  const {image, name} = props;
 
   return (
     <article
