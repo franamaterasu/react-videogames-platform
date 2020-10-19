@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./header.module.scss";
 
+import Bubble from '../bubble';
+
 const Header = () => {
   return (
+    <>
     <header className={styles.container}>
       <span className={styles.logo}>muzk</span>
       <input
@@ -11,6 +14,10 @@ const Header = () => {
         placeholder="Search news..."
       />
     </header>
+    <section className={styles.genders}>
+      <Bubble />
+    </section>
+   </>
   );
 };
 

@@ -42,9 +42,6 @@ function App() {
   return (
     <section className={styles.main}>
       <Header />
-      <section className={styles.genders}>
-        <Bubble />
-      </section>
       <List games={games}/>
     </section>
   );
