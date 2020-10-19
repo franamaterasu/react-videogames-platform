@@ -3,7 +3,7 @@ import styles from "./app.module.scss";
 
 import Header from "../header";
 import Bubble from "../bubble";
-import Card from "../card";
+import List from "../list";
 
 const games = [
   {
@@ -26,6 +26,16 @@ const games = [
     image:
       "https://media.rawg.io/media/crop/600/400/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
   },
+  {
+    name: "Metal Gear Solid V: The Phantom Pain",
+    image:
+      "https://media.rawg.io/media/crop/600/400/games/490/49016e06ae2103881ff6373248843069.jpg",
+  },
+  {
+    name: "Dark Soul III",
+    image:
+      "https://media.rawg.io/media/crop/600/400/games/da1/da1b267764d77221f07a4386b6548e5a.jpg",
+  },
 ];
 
 function App() {
@@ -35,11 +45,7 @@ function App() {
       <section className={styles.genders}>
         <Bubble />
       </section>
-      <section className={styles.cards}>
-        {games.map((card) => (
-          <Card card={card} />
-        ))}
-      </section>
+      <List games={games}/>
     </section>
   );
 }

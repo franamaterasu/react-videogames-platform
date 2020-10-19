@@ -8,6 +8,7 @@
   height: 80px;
   justify-content: center;
   margin-right: 30px;
+  transition: background 0.8s ease-in-out;
 
   &:last-of-type {
     margin-right: 0;
@@ -15,6 +16,7 @@
 
   &:hover {
     background: #bc0707;
+    cursor: pointer;
   }
 }
 
