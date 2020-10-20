@@ -5,7 +5,12 @@ import Bubble from '../bubble';
 
 const Header = props => {
 
-  const {handleChange} = props;
+  const handleChange = e => {
+    props.handleFilter({
+      value: e.target.value,
+      key: 'name'
+    });
+  }
 
   return (
     <>
