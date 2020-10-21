@@ -1,9 +1,12 @@
 import React from 'react';
 
 const Detail = props => {
+    const {image, name} = props.game;
+
     return (
-       <section className="">
-           <p>Name</p>
+       <section>
+           <img src={image} alt={name} />
+           <p>{name}</p>
        </section>
     )
 };

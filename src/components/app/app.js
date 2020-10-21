@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from "react";
+import {Route, Switch} from "react-router-dom";
 import styles from "./app.module.scss";
 
 import getDataFromApi from '../../services/getDataFromApi';
 
 import Header from "../header";
+import Bubble from '../bubble';
 import List from "../list";
+import Detail from "../detail";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -27,10 +30,28 @@ function App() {
     return filterName;
   });
 
+  const renderGameDetail = props => {
+    const gameUrl = props.match.params.url;
+
+    const foundGame = games.find(game => {
+      return game.url === gameUrl;
+    });
+
+    return <Detail game={foundGame} />
+  }
+
   return (
     <section className={styles.main}>
       <Header handleFilter={handleFilter} />
-      <List games={filteredGames}/>
+        <Switch>
+          <Route exact path="/">
+            <section className={styles.genders}>
+              <Bubble />
+            </section>
+            <List games={filteredGames}/>
+          </Route>
+          <Route path="/game/:url" render={renderGameDetail} />
+        </Switch>
     </section>
   );
 }

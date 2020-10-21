@@ -1,7 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import styles from "./header.module.scss";
-
-import Bubble from '../bubble';
 
 const Header = props => {
 
@@ -15,7 +14,7 @@ const Header = props => {
   return (
     <>
     <header className={styles.container}>
-      <span className={styles.logo}>muzk</span>
+      <Link to="/" className={styles.logo}>muzk</Link>
       <input
         className={styles.search}
         type="text"
@@ -23,9 +22,6 @@ const Header = props => {
         onChange={handleChange}
       />
     </header>
-    <section className={styles.genders}>
-      <Bubble />
-    </section>
    </>
   );
 };
