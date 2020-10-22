@@ -3,32 +3,52 @@
         {
             "url": "tomb-raider",
             "name": "Tomb Raider",
-            "image": "https://media.rawg.io/media/crop/600/400/games/ad2/ad2ffdf80ba993654f31da045bc02456.jpg"
+            "image": "https://media.rawg.io/media/crop/600/400/games/ad2/ad2ffdf80ba993654f31da045bc02456.jpg",
+            "banner": "https://media.rawg.io/media/resize/1280/-/games/ad2/ad2ffdf80ba993654f31da045bc02456.jpg",
+            "metascore": 86,
+            "genre": [
+                "Action",
+                "Adventure"
+            ],
+            "description": "A cinematic revival of the series in its action third person form, Tomb Rider follows Lara in her least experience period of life – her youth. Heavily influenced by Naughty Dog’s 'Uncharted', the game is a mix of everything, from stealth and survival to combat and QTE action scenes. Young Lara Croft arrives on the Yamatai, lost island near Japan, as the leader of the expedition in search of the Yamatai Kingdom, with a diverse team of specialists. But shipwreck postponed the successful arrival and seemingly forgotten island is heavily populated with hostile inhabitants, cultists of Solarii Brotherhood.",
+            "platforms": [
+                "PC",
+                "PlayStation 4",
+                "PlayStation 3",
+                "Xbox 360",
+                "Xbox One",
+                "macOS"
+            ]
         },
         {
             "url": "grand-theft-auto-v",
             "name": "Grand Theft Auto V",
-            "image": "https://media.rawg.io/media/crop/600/400/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg"
+            "image": "https://media.rawg.io/media/crop/600/400/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg",
+            "banner": "https://media.rawg.io/media/resize/1280/-/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg"
         },
         {
             "url": "the-witcher-3-wild-hunt",
             "name": "The Witcher 3: Wild Hunt",
-            "image": "https://media.rawg.io/media/crop/600/400/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
+            "image": "https://media.rawg.io/media/crop/600/400/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
+            "banner": "https://media.rawg.io/media/resize/1280/-/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
         },
         {
             "url": "bioshock-infinite",
             "name": "BioShock Infinite",
-            "image": "https://media.rawg.io/media/crop/600/400/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+            "image": "https://media.rawg.io/media/crop/600/400/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
+            "banner": "https://media.rawg.io/media/resize/1280/-/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
         },
         {
             "url": "metal-gear-solid-v-the-phantom-pain",
             "name": "Metal Gear Solid V: The Phantom Pain",
-            "image": "https://media.rawg.io/media/crop/600/400/games/490/49016e06ae2103881ff6373248843069.jpg"
+            "image": "https://media.rawg.io/media/crop/600/400/games/490/49016e06ae2103881ff6373248843069.jpg",
+            "banner": "https://media.rawg.io/media/resize/1280/-/games/490/49016e06ae2103881ff6373248843069.jpg"
         },
         {
             "url": "dark-soul-3",
             "name": "Dark Soul III",
-            "image": "https://media.rawg.io/media/crop/600/400/games/da1/da1b267764d77221f07a4386b6548e5a.jpg"
+            "image": "https://media.rawg.io/media/crop/600/400/games/da1/da1b267764d77221f07a4386b6548e5a.jpg",
+            "banner": "https://media.rawg.io/media/resize/1280/-/games/da1/da1b267764d77221f07a4386b6548e5a.jpg"
         }
     ]
 }
