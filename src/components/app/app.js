@@ -23,7 +23,7 @@ function App() {
 
   const handleFilter = data => {
     if(data.key === 'name') {
-      setNameFilter({nameFilter: data.value});
+      setNameFilter(data.value);
     }
   }
 
