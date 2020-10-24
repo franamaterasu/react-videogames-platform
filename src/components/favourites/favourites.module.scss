@@ -1,12 +1,23 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
   padding: 50px 15%;
   position: fixed;
   bottom: 0;
   background: darken(#1c1c1c, 5%);
   width: 100%;
+}
+
+.title {
+  color: #fff;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: 300;
+  font-size: 42px;
+  margin-bottom: 35px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
 }
 
 .item {

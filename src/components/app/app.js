@@ -14,13 +14,15 @@ function App() {
   const [games, setGames] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
   const [favourites, setFavourites] = useState([]);
+  const [showFavourites, setShowFavourites] = useState(false);
 
+
+  // Conexión API
   useEffect(() => {
     getDataFromApi().then(data => setGames(data));
   }, []);
 
   // Filtrado por nombre
-
   const handleFilter = data => {
     if(data.key === 'name') {
       setNameFilter(data.value);
@@ -32,6 +34,7 @@ function App() {
     return filterName;
   });
 
+  // Añadir a favoritos
   const handleEvent = favouriteData => {
     setFavourites([...favourites, favouriteData]);
   }
@@ -46,9 +49,18 @@ function App() {
     return <Detail game={foundGame} handleEvent={handleEvent}/>
   }
 
+  // Mostrar y ocultar la sección de favoritos
+  const handleEventShowFavourite = data => {
+    setShowFavourites(true);
+  }
+
+  const handleEventCloseFavouriteClick = data => {
+    setShowFavourites(false);
+  }
+
   return (
     <section className={styles.main}>
-      <Header handleFilter={handleFilter} />
+      <Header handleFilter={handleFilter} handleEventShowFavourite={handleEventShowFavourite}/>
       <Switch>
         <Route exact path="/">
           <section className={styles.genders}>
@@ -58,7 +70,9 @@ function App() {
         </Route>
         <Route path="/game/:url" render={renderGameDetail} />
       </Switch>
-      <Favourites favourites={favourites} />
+      {
+        showFavourites === true ? <Favourites favourites={favourites} handleEventCloseFavouriteClick={handleEventCloseFavouriteClick}/> : ''
+      }
     </section>
   );
 }

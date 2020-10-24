@@ -1,5 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import { FaList } from "react-icons/fa";
+
 import styles from "./header.module.scss";
 
 const Header = props => {
@@ -8,6 +10,12 @@ const Header = props => {
     props.handleFilter({
       value: e.target.value,
       key: 'name'
+    });
+  }
+
+  const handleEventFavourite = e => {
+     props.handleEventShowFavourite({
+      data: false
     });
   }
 
@@ -21,6 +29,7 @@ const Header = props => {
         placeholder="Search news..."
         onChange={handleChange}
       />
+      <FaList className={`${styles.header__button}, ${styles['header__button--favourites']}`} onClick={handleEventFavourite}/>
     </header>
    </>
   );
