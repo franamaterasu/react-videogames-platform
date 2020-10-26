@@ -8,13 +8,11 @@ import Header from "../header";
 import Bubble from '../bubble';
 import List from "../list";
 import Detail from "../detail";
-import Favourites from "../favourites";
 
 function App() {
   const [games, setGames] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
   const [favourites, setFavourites] = useState([]);
-  const [showFavourites, setShowFavourites] = useState(false);
 
 
   // Conexión API
@@ -49,18 +47,9 @@ function App() {
     return <Detail game={foundGame} handleEvent={handleEvent}/>
   }
 
-  // Mostrar y ocultar la sección de favoritos
-  const handleEventShowFavourite = data => {
-    setShowFavourites(true);
-  }
-
-  const handleEventCloseFavouriteClick = data => {
-    setShowFavourites(false);
-  }
-
   return (
     <section className={styles.main}>
-      <Header handleFilter={handleFilter} handleEventShowFavourite={handleEventShowFavourite}/>
+      <Header handleFilter={handleFilter} />
       <Switch>
         <Route exact path="/">
           <section className={styles.genders}>
@@ -69,10 +58,10 @@ function App() {
           <List games={filteredGames} handleEvent={handleEvent}/>
         </Route>
         <Route path="/game/:url" render={renderGameDetail} />
+        <Route path="/favourites">
+          <List games={favourites} handleEvent={handleEvent}/>
+        </Route>
       </Switch>
-      {
-        showFavourites === true ? <Favourites favourites={favourites} handleEventCloseFavouriteClick={handleEventCloseFavouriteClick}/> : ''
-      }
     </section>
   );
 }

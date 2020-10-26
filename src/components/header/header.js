@@ -13,12 +13,6 @@ const Header = props => {
     });
   }
 
-  const handleEventFavourite = e => {
-     props.handleEventShowFavourite({
-      data: false
-    });
-  }
-
   return (
     <>
     <header className={styles.container}>
@@ -29,7 +23,9 @@ const Header = props => {
         placeholder="Search news..."
         onChange={handleChange}
       />
-      <FaList className={`${styles.header__button}, ${styles['header__button--favourites']}`} onClick={handleEventFavourite}/>
+      <Link to="/favourites">
+        <FaList className={`${styles.header__button}, ${styles['header__button--favourites']}`} />
+      </Link>
     </header>
    </>
   );

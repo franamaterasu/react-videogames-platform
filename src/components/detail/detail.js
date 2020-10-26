@@ -3,14 +3,15 @@ import styles from './detail.module.scss';
 
 const Detail = props => {
   const {handleEvent} = props;
-  const {url, name, banner, description} = props.game;
+  const {url, name, banner, image, description} = props.game;
 
   // Función de añadir a la lista de favoritos
   const handleFavouriteClick = e => {
     handleEvent({
       "url": url,
       "name": name,
-      "banner": banner
+      "banner": banner,
+      "image": image
     })
   }
 
