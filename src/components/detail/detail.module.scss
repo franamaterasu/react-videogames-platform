@@ -1,6 +1,8 @@
 .banner {
   position: relative;
-  height: 80vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 
   &::after {
     content: '';
@@ -13,11 +15,11 @@
   }
 
   &__info {
-    position: absolute;
-    bottom: 45%;
     padding: 0 15%;
     width: 90%;
     max-width: 750px;
+    position: relative;
+    z-index: 2;
   }
 
   &__title {
@@ -34,7 +36,65 @@
     font-size: 15px;
     line-height: 23px;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 35px
+  }
+
+  &__data {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  &__metascore {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    margin-left: 20px;
+    background: #f2d86f;
+    font-family: "Open sans", sans-serif;
+    padding: 12px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+
+    &-number {
+      display: block;
+      margin-left: 5px;
+      font-size: 16px;
+    }
+  }
+
+  &__platforms {
+    display: flex;
+  }
+
+  &__platform {
+    list-style: none;
+    margin-right: 30px;
+
+    &-image {
+      height: 23px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__genres {
+    margin-left: 20px;
+    font-size: 15px;
+    color: #fff;
+    font-family: "Open sans", sans-serif;
+  }
+
+  &__genre {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 15px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
