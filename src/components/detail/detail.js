@@ -1,10 +1,13 @@
 import React from 'react';
 import {GiSevenPointedStar} from "react-icons/gi";
+import MessageBar from '../messageBar';
 import styles from './detail.module.scss';
 
 const Detail = props => {
-  const {handleEvent} = props;
+  const {handleEvent, favourites} = props;
   const {url, name, banner, image, description, metascore, platforms, genres} = props.game;
+
+  
 
   // Función de añadir a la lista de favoritos
   const handleFavouriteClick = e => {
@@ -17,8 +20,8 @@ const Detail = props => {
     })
   }
   
-
-    return (
+  return (
+    <>
       <section className={styles.banner}
       style={{
           backgroundImage: `url(${banner})`,
@@ -57,7 +60,8 @@ const Detail = props => {
             </div>
         </section>
       </section>
-    )
+    </>
+  )
 };
 
 export default Detail;

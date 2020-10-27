@@ -5,7 +5,7 @@ import styles from "./app.module.scss";
 import getDataFromApi from '../../services/getDataFromApi';
 
 import Header from "../header";
-import Bubble from '../bubble';
+// import Bubble from '../bubble';
 import List from "../list";
 import Detail from "../detail";
 
@@ -44,7 +44,7 @@ function App() {
       return game.url === gameUrl;
     });
 
-    return <Detail game={foundGame} handleEvent={handleEvent} />
+    return <Detail game={foundGame} handleEvent={handleEvent} favourites={favourites} />
   }
 
   return (
