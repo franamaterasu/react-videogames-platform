@@ -44,7 +44,7 @@ function App() {
       return game.url === gameUrl;
     });
 
-    return <Detail game={foundGame} handleEvent={handleEvent}/>
+    return <Detail game={foundGame} handleEvent={handleEvent} />
   }
 
   return (
@@ -52,9 +52,11 @@ function App() {
       <Header handleFilter={handleFilter} />
       <Switch>
         <Route exact path="/">
+          {/*
           <section className={styles.genders}>
             <Bubble />
           </section>
+          */}
           <List games={filteredGames} handleEvent={handleEvent}/>
         </Route>
         <Route path="/game/:url" render={renderGameDetail} />

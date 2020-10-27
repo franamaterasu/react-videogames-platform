@@ -30,7 +30,9 @@ const Detail = props => {
             <h1 className={styles.banner__title}>{name}</h1>
             <p className={styles.banner__description}>{description}</p>
             <section className={styles.banner__data}>
-              <button onClick={handleFavouriteClick} className={`${styles.button} ${styles['button--add']}`}>Add to favourites</button>
+              <button onClick={handleFavouriteClick} className={`${styles.button} ${styles['button--add']}`}>
+                Add to favourites
+              </button>
               <div className={styles.banner__metascore}>
                 <GiSevenPointedStar className={styles.banner__icon} />
                 <span className={styles['banner__metascore-number']}>{metascore}</span>
