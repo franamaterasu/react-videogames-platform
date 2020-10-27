@@ -8,6 +8,7 @@ import Header from "../header";
 // import Bubble from '../bubble';
 import List from "../list";
 import Detail from "../detail";
+import Search from "../search";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -49,7 +50,7 @@ function App() {
 
   return (
     <section className={styles.main}>
-      <Header handleFilter={handleFilter} />
+      <Header />
       <Switch>
         <Route exact path="/">
           {/*
@@ -57,6 +58,7 @@ function App() {
             <Bubble />
           </section>
           */}
+          <Search handleFilter={handleFilter} />
           <List games={filteredGames} handleEvent={handleEvent}/>
         </Route>
         <Route path="/game/:url" render={renderGameDetail} />
