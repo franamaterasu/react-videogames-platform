@@ -9,6 +9,7 @@ import Header from "../header";
 import List from "../list";
 import Detail from "../detail";
 import Search from "../search";
+import EmptyState from "../emptyState";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -63,7 +64,7 @@ function App() {
         </Route>
         <Route path="/game/:url" render={renderGameDetail} />
         <Route path="/favourites">
-          <List games={favourites} handleEvent={handleEvent}/>
+          {favourites.length === 0 ? <EmptyState message="Your favourite games list is empty, add any game to the list." /> : <List games={favourites} handleEvent={handleEvent}/>}
         </Route>
       </Switch>
     </section>
