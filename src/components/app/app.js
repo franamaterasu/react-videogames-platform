@@ -39,12 +39,18 @@ function App() {
     setFavourites([...favourites, favouriteData]);
   }
 
+  // Mostrar info detalle
   const renderGameDetail = props => {
     const gameUrl = props.match.params.url;
 
     const foundGame = games.find(game => {
       return game.url === gameUrl;
     });
+
+    // Mostrar emptyState si no existe el juego
+    if(foundGame === undefined) {
+      return <EmptyState message="Dont found this game, comeback to home to watch other games" />
+    }
 
     return <Detail game={foundGame} handleEvent={handleEvent} favourites={favourites} />
   }
