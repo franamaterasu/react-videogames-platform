@@ -66,7 +66,11 @@ function App() {
           </section>
           */}
           <Search handleFilter={handleFilter} />
-          <List games={filteredGames} handleEvent={handleEvent}/>
+          {filteredGames.length === 0 ? 
+            <EmptyState message="Try with other game" /> 
+            : 
+            <List games={filteredGames} handleEvent={handleEvent}/>
+          }
         </Route>
         <Route path="/game/:url" render={renderGameDetail} />
         <Route path="/favourites">
