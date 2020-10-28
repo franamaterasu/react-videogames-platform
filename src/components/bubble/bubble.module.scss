@@ -1,9 +1,11 @@
+@import '../../scss/main.scss';
+
 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #212121;
-  border-radius: 6px;
+  background: $dark--two;
+  border-radius: $border-radius;
   width: 80px;
   height: 80px;
   justify-content: center;
@@ -15,20 +17,20 @@
   }
 
   &:hover {
-    background: #bc0707;
+    background: $red;
     cursor: pointer;
   }
 }
 
 .icon {
-  fill: #fff;
+  fill: $white;
   font-size: 29px;
 }
 
 .name {
-  color: #fff;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  font-weight: 300;
+  color: $white;
+  font-family: $font-family--secondary;
+  font-weight: $font-weight--light;
   font-size: 17px;
   margin: 9px 0 0 0;
 }

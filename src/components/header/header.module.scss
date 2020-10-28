@@ -1,14 +1,16 @@
+@import '../../scss/main.scss';
+
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 15%;
-  background: #1a1a2e;
+  background: $blue;
 }
 
 .logo {
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  font-weight: 300;
+  font-family: $font-family--secondary;
+  font-weight: $font-weight--light;
   font-size: 32px;
   letter-spacing: -1px;
   color: #fff;
@@ -17,6 +19,6 @@
 
 .header__button {
   &--favourites {
-    fill: #fff;
+    fill: $white;
   }
 }
