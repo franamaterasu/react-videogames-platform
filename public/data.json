@@ -5,6 +5,7 @@
       "name": "Tomb Raider",
       "image": "https://media.rawg.io/media/crop/600/400/games/ad2/ad2ffdf80ba993654f31da045bc02456.jpg",
       "banner": "https://media.rawg.io/media/resize/1280/-/games/ad2/ad2ffdf80ba993654f31da045bc02456.jpg",
+      "iframe": "https://www.youtube.com/embed/CoLBrnC2F9g",
       "metascore": 86,
       "genres": [
         "Action",
@@ -23,6 +24,7 @@
       "name": "Grand Theft Auto V",
       "image": "https://media.rawg.io/media/crop/600/400/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg",
       "banner": "https://media.rawg.io/media/resize/1280/-/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg",
+      "iframe": "https://www.youtube.com/embed/QkkoHAzjnUs",
       "description": "Rockstar Games went bigger, since their previous installment of the series. You get the complicated and realistic world-building from Liberty City of GTA4 in the setting of lively and diverse Los Santos, from an old fan favorite GTA San Andreas. 561 different vehicles (including every transport you can operate) and the amount is rising with every update. Simultaneous storytelling from three unique perspectives: Follow Michael, ex-criminal living his life of leisure away from the past, Franklin, a kid that seeks the better future, and Trevor, the exact past Michael is trying to run away from.",
       "metascore": 97,
       "genres": [
@@ -40,6 +42,7 @@
       "name": "The Witcher 3: Wild Hunt",
       "image": "https://media.rawg.io/media/crop/600/400/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
       "banner": "https://media.rawg.io/media/resize/1280/-/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
+      "iframe": "https://www.youtube.com/embed/XHrskkHf958",
       "description": "The third game in a series, it holds nothing back from the player. Open world adventures of the renowned monster slayer Geralt of Rivia are now even on a larger scale. Following the source material more accurately, this time Geralt is trying to find the child of the prophecy, Ciri while making a quick coin from various contracts on the side. Great attention to the world building above all creates an immersive story, where your decisions will shape the world around you.",
       "metascore": 92,
       "genres": [
@@ -59,6 +62,7 @@
       "name": "BioShock Infinite",
       "image": "https://media.rawg.io/media/crop/600/400/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
       "banner": "https://media.rawg.io/media/resize/1280/-/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
+      "iframe": "https://www.youtube.com/embed/EsJ55BzIvkE",
       "metascore": 94,
       "genres": [
         "Action",
@@ -77,6 +81,7 @@
       "name": "Metal Gear Solid V: The Phantom Pain",
       "image": "https://media.rawg.io/media/crop/600/400/games/490/49016e06ae2103881ff6373248843069.jpg",
       "banner": "https://media.rawg.io/media/resize/1280/-/games/490/49016e06ae2103881ff6373248843069.jpg",
+      "iframe": "https://www.youtube.com/embed/GJVxPAiB7as",
       "metascore": 91,
       "genres": [
         "Action",
@@ -95,6 +100,7 @@
       "name": "Dark Souls III",
       "image": "https://media.rawg.io/media/crop/600/400/games/da1/da1b267764d77221f07a4386b6548e5a.jpg",
       "banner": "https://media.rawg.io/media/resize/1280/-/games/da1/da1b267764d77221f07a4386b6548e5a.jpg",
+      "iframe": "https://www.youtube.com/embed/cWBwFhUv1-8",
       "metascore": 89,
       "genres": [
         "Action",
