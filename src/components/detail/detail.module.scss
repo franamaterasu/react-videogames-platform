@@ -1,10 +1,19 @@
 @import '../../scss/main.scss';
 
 .banner {
+  background-size: cover;
   position: relative;
-  height: calc(100vh - 58px);
+  height: 300px;
   display: flex;
   align-items: center;
+
+  @media(min-width: $small) {
+    height: 355px;
+  }
+
+  @media(min-width: $medium) {
+    height: calc(100vh - 52px);
+  }
 
   &::after {
     content: '';
@@ -17,51 +26,87 @@
   }
 
   &__info {
-    padding: 0 15%;
-    width: 90%;
+    margin: 50px auto;
     max-width: 750px;
     position: relative;
+    width: 90%;
     z-index: 2;
+
+    @media(min-width: $medium) {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 52px);
+      justify-content: center;
+      margin: 0;
+      max-width: 692px;
+      padding: 0 5%;
+      position: absolute;
+      top: calc(0vh + 52px);
+      width: 100%;
+
+      @media(min-width: $large) {
+        max-width: none;
+        padding: 0 10%;
+      }
+    }
   }
 
   &__title {
-    font-family: $font-family--secondary;
-    font-weight: $font-weight--regular;
-    font-size: 80px;
-    letter-spacing: 2px;
     color: $white;
+    font-family: $font-family--secondary;
+    font-size: 70px;
+    font-weight: $font-weight--regular;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+
+    @media(min-width: $large) {
+      font-size: 80px;
+      margin-bottom: 0;
+      max-width: 700px;
+    }
   }
 
   &__description {
-    font-family: $font-family--default;
-    font-weight: $font-weight--regular;
-    font-size: 15px;
-    line-height: 23px;
     color: $white;
-    margin-bottom: 35px
+    font-family: $font-family--default;
+    font-size: 15px;
+    font-weight: $font-weight--regular;
+    line-height: 23px;
+    margin-bottom: 35px;
+
+    @media(min-width: $medium) {
+      max-width: 615px;
+    }
+
+    @media(min-width: $large) {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 700px;
+    }
   }
 
   &__data {
-    display: flex;
     align-items: center;
+    display: flex;
     margin-bottom: 35px;
   }
 
   &__metascore {
-    display: flex;
-    color: #fff;
     align-items: center;
-    margin-left: 20px;
     background: #f2d86f;
-    font-family: $font-family--default;
-    padding: 12px 15px;
     border-radius: $border-radius;
+    color: #fff;
+    display: flex;
+    font-family: $font-family--default;
     font-size: 15px;
+    margin-left: 20px;
+    padding: 12px 15px;
 
     &-number {
       display: block;
-      margin-left: 5px;
       font-size: 16px;
+      margin-left: 5px;
     }
   }
 
@@ -83,16 +128,16 @@
   }
 
   &__genres {
-    margin-left: 20px;
-    font-size: 15px;
-    color: #fff;
+    color: $white;
     font-family: $font-family--default;
+    font-size: 15px;
+    margin-left: 20px;
   }
 
   &__genre {
     display: inline-block;
-    margin-right: 10px;
     font-size: 15px;
+    margin-right: 10px;
 
     &:last-of-type {
       margin-right: 0;
@@ -101,12 +146,12 @@
 }
 
 .button {
-  border: 0;
-  outline: none;
-  font-family: $font-family--default;
-  background: #bc1c1c;
-  color: #fff;
-  padding: 10px 20px;
+  background: $red;
   border-radius: $border-radius;
+  border: 0;
+  color: $white;
+  font-family: $font-family--default;
   font-size: 15px;
+  outline: none;
+  padding: 10px 20px;
 }

@@ -4,8 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15%;
+  padding: 10px 5%;
   background: $blue;
+
+  @media(min-width: $large) {
+    padding: 10px 10%;
+  }
 }
 
 .logo {

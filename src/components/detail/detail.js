@@ -25,11 +25,12 @@ const Detail = props => {
       <section className={styles.banner}
       style={{
           backgroundImage: `url(${banner})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat"
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center"
           }}
       >
-        <section className={styles.banner__info}>
+      </section>
+      <section className={styles.banner__info}>
             <h1 className={styles.banner__title}>{name}</h1>
             <p className={styles.banner__description}>{description}</p>
             <section className={styles.banner__data}>
@@ -59,7 +60,6 @@ const Detail = props => {
               } 
             </div>
         </section>
-      </section>
     </>
   )
 };
