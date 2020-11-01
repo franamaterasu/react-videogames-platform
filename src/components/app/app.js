@@ -15,7 +15,7 @@ function App() {
   const [games, setGames] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
   const [favourites, setFavourites] = useState([]);
-
+  const [repeatGame, setRepeatGame] = useState(false);
 
   // Conexión API
   useEffect(() => {
@@ -36,7 +36,13 @@ function App() {
 
   // Añadir a favoritos
   const handleEvent = favouriteData => {
-    setFavourites([...favourites, favouriteData]);
+    let repeatedGame = favourites.find(element => element.url === favouriteData.url);
+
+    if(repeatedGame === undefined) {
+      setFavourites([...favourites, favouriteData]);
+    } else {
+      setRepeatGame(true);
+    }
   }
 
   // Mostrar info detalle
@@ -52,7 +58,7 @@ function App() {
       return <EmptyState message="Dont found this game, comeback to home to watch other games" />
     }
 
-    return <Detail game={foundGame} handleEvent={handleEvent} favourites={favourites} />
+    return <Detail game={foundGame} repeatGame={repeatGame} handleEvent={handleEvent} favourites={favourites} />
   }
 
   return (
