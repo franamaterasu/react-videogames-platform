@@ -21,8 +21,43 @@
   text-decoration: none;
 }
 
-.header__button {
-  &--favourites {
-    fill: $white;
+.nav {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 30px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &__icon {
+      fill: $white;
+      transition: fill .8s ease-in-out;
+    }
+
+    &__text {
+      color: $white;
+      font-family: $font-family--default;
+      font-weight: $font-weight--light;
+      font-size: 15px;
+      display: block;
+      margin-left: 5px;
+      transition: color .8s ease-in-out;
+    }
+
+    &:hover {
+      .nav__item__icon {
+        fill: $red;
+      }
+
+      .nav__item__text {
+        color: $red;
+      }
+    }
   }
 }
