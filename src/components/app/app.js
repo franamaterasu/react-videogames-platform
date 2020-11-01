@@ -63,7 +63,7 @@ function App() {
 
   return (
     <section className={styles.main}>
-      <Header />
+      <Header favouritesCount={favourites}/>
       <Switch>
         <Route exact path="/">
           {/*

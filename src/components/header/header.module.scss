@@ -48,6 +48,25 @@
       display: block;
       margin-left: 5px;
       transition: color .8s ease-in-out;
+      margin-right: 5px;
+    }
+
+    &__circle {
+      width: 18px;
+      background: $red;
+      color: $white;
+      height: 18px;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 11px;
+      position: relative;
+      top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 0;
+      font-family: $font-family--default;
+      font-weight: $font-weight--light;
     }
 
     &:hover {
