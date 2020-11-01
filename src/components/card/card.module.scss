@@ -2,6 +2,13 @@
 
 .item {
   position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .image {
+      transform: scale(1.9) rotate(-20deg);
+    }
+  }
 }
 
 .image {
@@ -9,6 +16,7 @@
   height: auto;
   border-radius: $border-radius;
   position: relative;
+  transition: transform .8s ease-in-out;
 }
 
 .info {

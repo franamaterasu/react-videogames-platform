@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import {GiSevenPointedStar} from "react-icons/gi";
 import { FaPlay, FaPlus } from "react-icons/fa";
-import MessageBar from '../messageBar';
 import styles from './detail.module.scss';
 
 const Detail = props => {
-  const {handleEvent, repeatGame} = props;
+  const {handleEvent, favourites} = props;
   const {url, name, banner, iframe,  image, description, metascore, platforms, genres} = props.game;
 
   const [video, setVideo] = useState(false);
@@ -44,6 +43,8 @@ const Detail = props => {
       "metascore": metascore
     })
   }
+
+  let repeatedGame = favourites.find(element => element.url === url);
   
   return (
     <>
@@ -60,7 +61,9 @@ const Detail = props => {
           <h1 className={styles.banner__title}>{name}</h1>
           <p className={styles.banner__description}>{description}</p>
           <section className={styles.banner__data}>
-              <button onClick={handleFavouriteClick} className={`${styles.button} ${styles['button--add']}`}>Add to favourites</button>
+            {
+              repeatedGame ? <button className={`${styles.button} ${styles['button--add']}`}>Added to favourites</button>  :   <button onClick={handleFavouriteClick} className={`${styles.button} ${styles['button--add']}`}>Add to favourites</button> 
+            }
             <button onClick={handleShowVideo} className={`${styles.button} ${styles['button--video']}`}>
               Show trailer
             </button>
