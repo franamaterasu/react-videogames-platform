@@ -4,7 +4,7 @@ import { FaPlay, FaPlus } from "react-icons/fa";
 import styles from './detail.module.scss';
 
 const Detail = props => {
-  const {handleEvent, favourites} = props;
+  const {handleEvent, handleEventNoFavourites, favourites} = props;
   const {url, name, banner, iframe,  image, description, metascore, platforms, genres} = props.game;
 
   const [video, setVideo] = useState(false);
@@ -44,6 +44,19 @@ const Detail = props => {
     })
   }
 
+  // Función de eliminar de la lista e favoritos
+
+  const handleNoFavouriteClick = e => {
+    handleEventNoFavourites({
+      "url": url,
+      "name": name,
+      "banner": banner,
+      "image": image,
+      "metascore": metascore
+    })
+  }
+
+  // Saber si juego ya existe en la lista de favoritos
   let repeatedGame = favourites.find(element => element.url === url);
   
   return (
@@ -62,7 +75,11 @@ const Detail = props => {
           <p className={styles.banner__description}>{description}</p>
           <section className={styles.banner__data}>
             {
-              repeatedGame ? <button className={`${styles.button} ${styles['button--add']}`}>Added to favourites</button>  :   <button onClick={handleFavouriteClick} className={`${styles.button} ${styles['button--add']}`}>Add to favourites</button> 
+              repeatedGame 
+              ? 
+                <button onClick={handleNoFavouriteClick} className={`${styles.button} ${styles['button--delete']}`}>Remove to favourites</button>
+              :
+                <button onClick={handleFavouriteClick} className={`${styles.button} ${styles['button--add']}`}>Add to favourites</button> 
             }
             <button onClick={handleShowVideo} className={`${styles.button} ${styles['button--video']}`}>
               Show trailer

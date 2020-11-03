@@ -45,6 +45,17 @@ function App() {
     }
   }
 
+  // Eliminar de favoritos
+  const handleEventNoFavourites = favouriteData => {
+    let detectGame = favourites.find(element => element.url === favouriteData.url);
+
+    let deletedGame = favourites.indexOf(detectGame);
+
+    favourites.splice(deletedGame, 1);
+
+    setFavourites([...favourites]);
+  }
+
   // Mostrar info detalle
   const renderGameDetail = props => {
     const gameUrl = props.match.params.url;
@@ -58,7 +69,13 @@ function App() {
       return <EmptyState message="Dont found this game, comeback to home to watch other games" />
     }
 
-    return <Detail game={foundGame} repeatGame={repeatGame} handleEvent={handleEvent} favourites={favourites} />
+    return <Detail 
+      game={foundGame} 
+      repeatGame={repeatGame} 
+      handleEvent={handleEvent} 
+      handleEventNoFavourites={handleEventNoFavourites} 
+      favourites={favourites} 
+      />
   }
 
   return (
