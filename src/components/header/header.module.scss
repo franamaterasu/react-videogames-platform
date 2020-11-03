@@ -6,6 +6,7 @@
   align-items: center;
   padding: 10px 5%;
   background: $blue;
+  position: relative;
 
   @media(min-width: $large) {
     padding: 10px 10%;
@@ -24,6 +25,22 @@
 .nav {
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: -78px;
+  width: 100%;
+  left: 0;
+  padding: 31px 0;
+  background: $white;
+  z-index: 9;
+
+  @media(min-width: $medium) {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    bottom: 0;
+    width: auto;
+  }
 
   &__item {
     display: flex;
@@ -36,12 +53,16 @@
     }
 
     &__icon {
-      fill: $white;
+      fill: $dark;
       transition: fill .8s ease-in-out;
+
+      @media(min-width: $medium) {
+        fill: $white;
+      }
     }
 
     &__text {
-      color: $white;
+      color: $dark;
       font-family: $font-family--default;
       font-weight: $font-weight--light;
       font-size: 15px;
@@ -49,6 +70,10 @@
       margin-left: 5px;
       transition: color .8s ease-in-out;
       margin-right: 5px;
+
+       @media(min-width: $medium) {
+        color: $white;
+      }
     }
 
     &__circle {
@@ -77,6 +102,15 @@
       .nav__item__text {
         color: $red;
       }
+    }
+  }
+
+  &__mobile-icon {
+    fill:$white;
+    font-size: 25px;
+
+    @media(min-width: $medium) {
+      display: none;
     }
   }
 }

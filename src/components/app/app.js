@@ -17,6 +17,7 @@ function App() {
   const [nameFilter, setNameFilter] = useState('');
   const [favourites, setFavourites] = useState([]);
   const [repeatGame, setRepeatGame] = useState(false);
+  const [nav, setNav] = useState(false);
 
   // Conexión API
   useEffect(() => {
@@ -79,9 +80,14 @@ function App() {
       />
   }
 
+    // Función para mostrar y ocultar el menú
+  const handleNav = () => {
+    nav === false ? setNav(true) : setNav(false);
+  }
+
   return (
     <section className={styles.main}>
-      <Header favouritesCount={favourites}/>
+      <Header favouritesCount={favourites} handleNav={handleNav} nav={nav}/>
       <Switch>
         <Route exact path="/">
           {/*
