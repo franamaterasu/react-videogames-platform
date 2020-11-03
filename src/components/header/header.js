@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import { FaHouseDamage, FaBurn, FaList } from "react-icons/fa";
+import { FaHouseDamage, FaBurn, FaMale } from "react-icons/fa";
 
 import styles from "./header.module.scss";
 
@@ -25,9 +25,9 @@ const Header = props => {
             favouritesCount.length > 0 ? <div className={styles.nav__item__circle}>{favouritesCount.length}</div> : ''
           }
         </Link>
-         <Link to="/list" className={styles.nav__item}>
-          <FaList className={styles.nav__item__icon} />
-          <span className={styles.nav__item__text}>List</span>
+         <Link to="/profile" className={styles.nav__item}>
+          <FaMale className={styles.nav__item__icon} />
+          <span className={styles.nav__item__text}>Profile</span>
         </Link>
       </nav>
     </header>

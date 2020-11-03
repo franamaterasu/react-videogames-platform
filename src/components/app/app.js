@@ -10,6 +10,7 @@ import List from "../list";
 import Detail from "../detail";
 import Search from "../search";
 import EmptyState from "../emptyState";
+import Profile from "../profile";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -96,6 +97,9 @@ function App() {
           }
         </Route>
         <Route path="/game/:url" render={renderGameDetail} />
+        <Route path="/profile">
+          <Profile />
+        </Route> 
         <Route path="/favourites">
           {favourites.length === 0 ? <EmptyState message="Your favourite games list is empty, add any game to the list." /> : <List games={favourites} handleEvent={handleEvent}/>}
         </Route>
