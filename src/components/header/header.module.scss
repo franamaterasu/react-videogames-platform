@@ -108,9 +108,5 @@
   &__mobile-icon {
     fill:$white;
     font-size: 25px;
-
-    @media(min-width: $medium) {
-      display: none;
-    }
   }
 }

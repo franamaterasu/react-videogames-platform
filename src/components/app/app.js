@@ -80,14 +80,14 @@ function App() {
       />
   }
 
-    // Función para mostrar y ocultar el menú
+  // Función para mostrar y ocultar el menú
   const handleNav = () => {
     nav === false ? setNav(true) : setNav(false);
   }
 
   return (
     <section className={styles.main}>
-      <Header favouritesCount={favourites} handleNav={handleNav} nav={nav}/>
+      <Header favouritesCount={favourites} handleNav={handleNav} nav={nav} />
       <Switch>
         <Route exact path="/">
           {/*
