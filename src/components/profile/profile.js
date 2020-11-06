@@ -53,9 +53,19 @@ const Profile = (props) => {
   };
 
   // Función para recoger la bio
-
   const handleChangeBio = (e) => {
     setBio(e.target.value);
+  };
+
+  // Función para resetear el formulario
+  const handleRsetFormClick = () => {
+    setName("");
+    setCity("");
+    setCountry("");
+    setTwitch("");
+    setTwitter("");
+    setSteam("");
+    setBio("");
   };
 
   return (
@@ -108,52 +118,84 @@ const Profile = (props) => {
       </section>
       {showModal && (
         <section className={styles.modal}>
-          <form>
-            <section className={styles.modal__container}>
+          <form className={styles.modal__container}>
+            <div className={`${styles.form__row} ${styles["form__row--one"]}`}>
               <input
+                className={styles.form__input}
                 type="text"
                 placeholder="New nickname"
+                value={name}
                 onChange={handleChangeName}
               />
+            </div>
+            <div className={`${styles.form__row} ${styles["form__row--two"]}`}>
               <input
+                className={styles.form__input}
                 type="text"
+                value={city}
                 placeholder="Your city"
                 onChange={handleChangeCity}
               />
               <input
+                className={styles.form__input}
                 type="text"
+                value={country}
                 placeholder="Your country code"
                 onChange={handleChangeCountry}
               />
+            </div>
+            <div
+              className={`${styles.form__row} ${styles["form__row--three"]}`}
+            >
               <input
+                className={styles.form__input}
                 type="text"
+                value={twitch}
                 placeholder="Your twitch nickname"
                 onChange={handleChangeTwitch}
               />
               <input
+                className={styles.form__input}
                 type="text"
+                value={twitter}
                 placeholder="Your twitter nickname"
                 onChange={handleChangeTwitter}
               />
               <input
+                className={styles.form__input}
                 type="text"
+                value={steam}
                 placeholder="Your steam nickname"
                 onChange={handleChangeSteam}
               />
+            </div>
+            <div className={`${styles.form__row} ${styles["form__row--one"]}`}>
               <textarea
+                className={styles.form__textarea}
+                value={bio}
                 placeholder="Your little bio"
                 onChange={handleChangeBio}
               />
-              <section className={styles.form__buttons}>
-                <button
-                  className={styles.form__submit}
-                  onClick={handleSubmitFormClick}
-                >
-                  Change your info
-                </button>
-                <input type="reset" value="Reset form" />
-                <button className={styles.form__exit}>Exit</button>
-              </section>
+            </div>
+            <section className={styles.form__buttons}>
+              <button
+                className={`${styles.form__button} ${styles["form__button--submit"]}`}
+                onClick={handleSubmitFormClick}
+              >
+                Change your info
+              </button>
+              <button
+                className={`${styles.form__button} ${styles["form__button--reset"]}`}
+                onClick={handleRsetFormClick}
+              >
+                Reset form
+              </button>
+              <button
+                className={`${styles.form__button} ${styles["form__button--exit"]}`}
+                onClick={handleSubmitFormClick}
+              >
+                Exit
+              </button>
             </section>
           </form>
         </section>
