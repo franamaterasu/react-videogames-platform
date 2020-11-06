@@ -1,4 +1,4 @@
-@import '../../scss/main.scss';
+@import "../../scss/main.scss";
 
 .content {
   display: flex;
@@ -22,7 +22,7 @@
     height: auto;
   }
 
-  @media(min-width: $large) {
+  @media (min-width: $large) {
     &:hover {
       .button {
         opacity: 1;
@@ -63,7 +63,7 @@
   line-height: 25px;
 
   &::before {
-    content: '';
+    content: "";
     height: 3px;
     background: $red;
     display: block;
@@ -89,7 +89,7 @@
   &__icon {
     font-size: 24px;
     fill: $white;
-    transition: fill .8s ease-in-out;
+    transition: fill 0.8s ease-in-out;
 
     &:hover {
       fill: $red;
@@ -107,14 +107,38 @@
   padding: 8px;
   bottom: 54px;
   border-radius: 100%;
-  transition: background .8s ease-in-out;
+  transition: background 0.8s ease-in-out;
 
   &:hover {
     background: darken($red, 5%);
   }
-  
-  @media(min-width: $large) {
+
+  @media (min-width: $large) {
     opacity: 0;
-    transition: opacity .8s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
+  }
+}
+
+// Modal
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background: rgba($dark, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    width: 90%;
+    max-width: 470px;
+    background: $black;
+    border-radius: $border-radius;
+    padding: 20px;
+    box-sizing: border-box;
   }
 }
