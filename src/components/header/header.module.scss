@@ -1,4 +1,4 @@
-@import '../../scss/main.scss';
+@import "../../scss/main.scss";
 
 .container {
   display: flex;
@@ -7,10 +7,6 @@
   padding: 10px 5%;
   background: $blue;
   position: relative;
-
-  @media(min-width: $large) {
-    padding: 10px 10%;
-  }
 }
 
 .logo {
@@ -33,7 +29,7 @@
   background: $white;
   z-index: 9;
 
-  @media(min-width: $medium) {
+  @media (min-width: $medium) {
     background: transparent;
     position: relative;
     z-index: 1;
@@ -54,9 +50,9 @@
 
     &__icon {
       fill: $dark;
-      transition: fill .8s ease-in-out;
+      transition: fill 0.8s ease-in-out;
 
-      @media(min-width: $medium) {
+      @media (min-width: $medium) {
         fill: $white;
       }
     }
@@ -68,10 +64,10 @@
       font-size: 15px;
       display: block;
       margin-left: 5px;
-      transition: color .8s ease-in-out;
+      transition: color 0.8s ease-in-out;
       margin-right: 5px;
 
-       @media(min-width: $medium) {
+      @media (min-width: $medium) {
         color: $white;
       }
     }
@@ -106,7 +102,7 @@
   }
 
   &__mobile-icon {
-    fill:$white;
+    fill: $white;
     font-size: 25px;
   }
 }
