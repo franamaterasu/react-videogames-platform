@@ -4,22 +4,28 @@ import { FaTwitch, FaTwitter, FaSteamSymbol, FaPen } from "react-icons/fa";
 
 const Profile = (props) => {
   const [showModal, setShowModal] = useState(false);
-  const [name, setName] = useState("");
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
-  const [twitch, setTwitch] = useState("");
-  const [twitter, setTwitter] = useState("");
-  const [steam, setSteam] = useState("");
-  const [bio, setBio] = useState("");
+  const [name, setName] = useState("Fran Amaterasu");
+  const [city, setCity] = useState("Málaga");
+  const [country, setCountry] = useState("ES");
+  const [twitch, setTwitch] = useState("franamaterasu");
+  const [twitter, setTwitter] = useState("franamaterasu");
+  const [steam, setSteam] = useState("franamaterasu");
+  const [bio, setBio] = useState(
+    "Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis."
+  );
 
   // Función para mostrar el modal
   const handleShowModalClick = () => {
     setShowModal(true);
   };
 
-  // Función para ocultar el modal
+  // Función para enviar el formulario
   const handleSubmitFormClick = () => {
-    setShowModal(false);
+    if (name === "" || city === "" || country === "") {
+      alert("You must insert required info");
+    } else {
+      setShowModal(false);
+    }
   };
 
   // Funcion para recoger el nick
@@ -58,7 +64,7 @@ const Profile = (props) => {
   };
 
   // Función para resetear el formulario
-  const handleRsetFormClick = () => {
+  const handleResetFormClick = () => {
     setName("");
     setCity("");
     setCountry("");
@@ -66,6 +72,11 @@ const Profile = (props) => {
     setTwitter("");
     setSteam("");
     setBio("");
+  };
+
+  // Función para ocultar el formulario
+  const handleExitFormClick = () => {
+    setShowModal(false);
   };
 
   return (
@@ -123,7 +134,7 @@ const Profile = (props) => {
               <input
                 className={styles.form__input}
                 type="text"
-                placeholder="New nickname"
+                placeholder="New nickname *"
                 value={name}
                 onChange={handleChangeName}
               />
@@ -133,14 +144,14 @@ const Profile = (props) => {
                 className={styles.form__input}
                 type="text"
                 value={city}
-                placeholder="Your city"
+                placeholder="Your city *"
                 onChange={handleChangeCity}
               />
               <input
                 className={styles.form__input}
                 type="text"
                 value={country}
-                placeholder="Your country code"
+                placeholder="Your country code *"
                 onChange={handleChangeCountry}
               />
             </div>
@@ -186,13 +197,13 @@ const Profile = (props) => {
               </button>
               <button
                 className={`${styles.form__button} ${styles["form__button--reset"]}`}
-                onClick={handleRsetFormClick}
+                onClick={handleResetFormClick}
               >
                 Reset form
               </button>
               <button
                 className={`${styles.form__button} ${styles["form__button--exit"]}`}
-                onClick={handleSubmitFormClick}
+                onClick={handleExitFormClick}
               >
                 Exit
               </button>
