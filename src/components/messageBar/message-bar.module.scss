@@ -1,18 +1,18 @@
 @import '../../scss/main.scss';
 
 .container {
-  width: 100%;
-  position: fixed;
+  background: $green;
   bottom: 0;
   left: 0;
   padding: 18px 0;
-  background: $green;
+  position: fixed;
+  width: 100%;
 }
 
 .message {
-  color: #fff;
+  color: $white;
   font-family: $font-family--default;
-  font-weight: $font-weight--regular;
   font-size: 17px;
+  font-weight: $font-weight--regular;
   text-align: center;
 }

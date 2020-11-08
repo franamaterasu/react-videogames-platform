@@ -1,4 +1,4 @@
-@import "../../scss/main.scss";
+@import '../../scss/main.scss';
 
 .item {
   border-radius: $border-radius;
@@ -18,7 +18,7 @@
   height: auto;
   border-radius: $border-radius;
   position: relative;
-  transition: transform 0.8s ease-in-out;
+  transition: transform .8s ease-in-out;
 }
 
 .info {
@@ -29,7 +29,7 @@
   background: linear-gradient(
     180deg,
     rgba($black, 0) 0%,
-    rgba($black, 0.7189250700280112) 48%
+    rgba($black, .7189250700280112) 48%
   );
   padding: 20px;
   box-sizing: border-box;

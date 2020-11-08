@@ -1,5 +1,4 @@
 {
-  "extends": "/usr/local/lib/node_modules/stylelint-config-standard",
   "rules": {
     "indentation": 2,
     "string-quotes": "single",
@@ -27,7 +26,7 @@
     "comment-whitespace-inside": "always",
     "comment-empty-line-before": "always",
     "at-rule-no-vendor-prefix": true,
-    "rule-empty-line-before": "always",
+    "rule-empty-line-before": "always-multi-line",
     "selector-pseudo-element-colon-notation": "double",
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-no-vendor-prefix": true,

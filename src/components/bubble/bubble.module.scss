@@ -1,16 +1,16 @@
 @import '../../scss/main.scss';
 
 .item {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   background: $dark--two;
   border-radius: $border-radius;
-  width: 80px;
+  display: flex;
+  flex-direction: column;
   height: 80px;
   justify-content: center;
   margin-right: 30px;
-  transition: background 0.8s ease-in-out;
+  transition: background .8s ease-in-out;
+  width: 80px;
 
   &:last-of-type {
     margin-right: 0;
@@ -30,7 +30,7 @@
 .name {
   color: $white;
   font-family: $font-family--secondary;
-  font-weight: $font-weight--light;
   font-size: 17px;
+  font-weight: $font-weight--light;
   margin: 9px 0 0 0;
 }

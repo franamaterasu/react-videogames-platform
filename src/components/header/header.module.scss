@@ -1,48 +1,48 @@
 @import "../../scss/main.scss";
 
 .container {
+  align-items: center;
+  background: $blue;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px 5%;
-  background: $blue;
   position: relative;
 }
 
 .logo {
+  color: $white;
   font-family: $font-family--secondary;
-  font-weight: $font-weight--light;
   font-size: 32px;
+  font-weight: $font-weight--light;
   letter-spacing: -1px;
-  color: #fff;
   text-decoration: none;
 }
 
 .nav {
+  background: $white;
+  bottom: -78px;
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: -78px;
-  width: 100%;
   left: 0;
   padding: 31px 0;
-  background: $white;
+  position: absolute;
+  width: 100%;
   z-index: 9;
 
   @media (min-width: $medium) {
     background: transparent;
-    position: relative;
-    z-index: 1;
-    padding: 0;
     bottom: 0;
+    padding: 0;
+    position: relative;
     width: auto;
+    z-index: 1;
   }
 
   &__item {
-    display: flex;
     align-items: center;
-    text-decoration: none;
+    display: flex;
     margin-right: 30px;
+    text-decoration: none;
 
     &:last-of-type {
       margin-right: 0;
@@ -50,7 +50,7 @@
 
     &__icon {
       fill: $dark;
-      transition: fill 0.8s ease-in-out;
+      transition: fill .8s ease-in-out;
 
       @media (min-width: $medium) {
         fill: $white;
@@ -59,13 +59,13 @@
 
     &__text {
       color: $dark;
-      font-family: $font-family--default;
-      font-weight: $font-weight--light;
-      font-size: 15px;
       display: block;
+      font-family: $font-family--default;
+      font-size: 15px;
+      font-weight: $font-weight--light;
       margin-left: 5px;
-      transition: color 0.8s ease-in-out;
       margin-right: 5px;
+      transition: color .8s ease-in-out;
 
       @media (min-width: $medium) {
         color: $white;
@@ -73,21 +73,21 @@
     }
 
     &__circle {
-      width: 18px;
-      background: $red;
-      color: $white;
-      height: 18px;
-      text-align: center;
-      border-radius: 50%;
-      font-size: 11px;
-      position: relative;
-      top: 2px;
-      display: flex;
       align-items: center;
+      background: $red;
+      border-radius: 50%;
+      color: $white;
+      display: flex;
+      font-family: $font-family--default;
+      font-size: 11px;
+      font-weight: $font-weight--light;
+      height: 18px;
       justify-content: center;
       line-height: 0;
-      font-family: $font-family--default;
-      font-weight: $font-weight--light;
+      position: relative;
+      text-align: center;
+      top: 2px;
+      width: 18px;
     }
 
     &:hover {
