@@ -5,17 +5,17 @@
   background: $black-two;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: rem(20) 0;
   width: 100%;
 }
 
 .input {
-  border-radius: 5px;
+  border-radius: $border-radius;
   border: none;
   box-sizing: border-box;
   font-family: $font-family--default;
-  max-width: 600px;
+  max-width: rem(600);
   outline: none;
-  padding: 10px 15px;
+  padding: rem(10) rem(15);
   width: 90%;
 }

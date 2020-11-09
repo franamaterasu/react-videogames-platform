@@ -14,17 +14,17 @@
 
 .icon {
   fill: $white;
-  font-size: 150px;
-  margin-bottom: 15px;
+  font-size: rem(150);
+  margin-bottom: rem(15);
 }
 
 .message {
   color: $white;
   font-family: $font-family--default;
-  font-size: 21px;
+  font-size: rem(21);
   font-weight: $font-weight--regular;
-  line-height: 28px;
-  max-width: 320px;
+  line-height: rem(28);
+  max-width: rem(320);
 }
 
 .button {
@@ -34,11 +34,11 @@
   color: $white;
   display: block;
   font-family: $font-family--default;
-  font-size: 19px;
-  margin: 20px auto 0;
-  max-width: 180px;
+  font-size: rem(19);
+  margin: rem(20) auto 0;
+  max-width: rem(180);
   outline: none;
-  padding: 10px 20px;
+  padding: rem(10) rem(20);
   text-decoration: none;
 
   &:hover {

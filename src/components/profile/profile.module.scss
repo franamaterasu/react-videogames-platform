@@ -11,11 +11,11 @@
   border-radius: 100%;
   border: 4px solid $white;
   font-size: 0;
-  height: 160px;
-  margin: 0 auto 20px;
+  height: rem(160);
+  margin: 0 auto rem(20);
   overflow: hidden;
   position: relative;
-  width: 160px;
+  width: rem(160);
 
   &__image {
     height: auto;
@@ -40,9 +40,9 @@
 
 .name {
   font-family: $font-family--secondary;
-  font-size: 38px;
+  font-size: rem(38);
   font-weight: $font-weight--light;
-  margin-bottom: 10px;
+  margin-bottom: rem(10);
 }
 
 .city,
@@ -51,15 +51,15 @@
 }
 
 .city {
-  font-size: 19px;
-  margin-bottom: 25px;
+  font-size: rem(19);
+  margin-bottom: rem(25);
 }
 
 .bio {
-  font-size: 15px;
-  line-height: 25px;
+  font-size: rem(15);
+  line-height: rem(25);
   margin: 0 auto;
-  max-width: 450px;
+  max-width: rem(450);
   width: 90%;
 
   &::before {
@@ -67,8 +67,8 @@
     border-radius: $border-radius;
     content: '';
     display: block;
-    height: 3px;
-    margin-bottom: 15px;
+    height: rem(3);
+    margin-bottom: rem(15);
   }
 }
 
@@ -76,10 +76,10 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: rem(25);
 
   &__item {
-    margin-right: 20px;
+    margin-right: rem(20);
 
     &:last-of-type {
       margin-right: 0;
@@ -88,7 +88,7 @@
 
   &__icon {
     fill: $white;
-    font-size: 24px;
+    font-size: rem(24);
     transition: fill .8s ease-in-out;
 
     &:hover {
@@ -100,12 +100,12 @@
 .button {
   background: $red;
   border-radius: 100%;
-  bottom: 54px;
+  bottom: rem(54);
   fill: $white;
-  font-size: 21px;
-  padding: 8px;
+  font-size: rem(21);
+  padding: rem(8);
   position: absolute;
-  right: 60px;
+  right: rem(60);
   transition: background .8s ease-in-out;
   z-index: 2;
 
@@ -124,7 +124,7 @@
 .modal {
   width: 100%;
   height: 100vh;
-  background: rgba($dark, 0.9);
+  background: rgba($dark, .9);
   position: fixed;
   top: 0;
   left: 0;
@@ -135,7 +135,7 @@
 
   &__container {
     width: 90%;
-    max-width: 600px;
+    max-width: rem(600);
     box-sizing: border-box;
   }
 }
@@ -147,9 +147,9 @@
   box-sizing: border-box;
   font-family: $font-family--default;
   outline: none;
-  padding: 10px 15px;
-  transition: all 0.8s ease-in-out;
-  opacity: 0.8;
+  padding: rem(10) rem(15);
+  transition: all .8s ease-in-out;
+  opacity: .8;
 
   &:focus {
     border-color: $red;
@@ -158,13 +158,13 @@
 }
 
 .form__textarea {
-  min-height: 120px;
+  min-height: rem(120);
 }
 
 .form__row {
   display: grid;
-  column-gap: 10px;
-  margin-bottom: 15px;
+  column-gap: rem(10);
+  margin-bottom: rem(15);
 
   &:last-of-type {
     margin-bottom: 0;
@@ -174,7 +174,7 @@
   &--two,
   &--three {
     grid-template-columns: 1fr;
-    row-gap: 10px;
+    row-gap: rem(10);
   }
 
   &--two {
@@ -193,7 +193,7 @@
 .form__buttons {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: rem(25);
 }
 
 .form__button {
@@ -201,12 +201,12 @@
   border: 0;
   color: $white;
   font-family: $font-family--default;
-  font-size: 14px;
-  margin-right: 15px;
-  padding: 8px 10px;
+  font-size: rem(14);
+  margin-right: rem(15);
+  padding: rem(8) rem(10);
   box-sizing: border-box;
   outline: none;
-  min-width: 90px;
+  min-width: rem(90);
 
   &--submit {
     background-color: $green;
