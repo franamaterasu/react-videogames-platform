@@ -28,16 +28,14 @@
 }
 
 .button {
+  @extend %button;
   background: $red;
-  border-radius: $border-radius;
-  border: 0;
   color: $white;
   display: block;
   font-family: $font-family--default;
   font-size: rem(19);
   margin: rem(20) auto 0;
   max-width: rem(180);
-  outline: none;
   padding: rem(10) rem(20);
   text-decoration: none;
 

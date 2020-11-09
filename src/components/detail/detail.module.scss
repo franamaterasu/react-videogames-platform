@@ -160,13 +160,10 @@
 }
 
 .button {
-  border-radius: $border-radius;
-  border: 0;
+  @extend %button;
   color: $white;
-  font-family: $font-family--default;
   font-size: rem(15);
   margin-right: rem(20);
-  outline: none;
   padding: rem(10) rem(20);
 
   &:last-of-type {
