@@ -5,6 +5,8 @@
   background-color: $blue;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: rem(1350);
   padding: rem(10) 5%;
   position: relative;
 }
