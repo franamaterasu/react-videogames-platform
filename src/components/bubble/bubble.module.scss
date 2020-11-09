@@ -2,14 +2,14 @@
 
 .item {
   align-items: center;
-  background: $dark--two;
+  background-color: $dark--two;
   border-radius: $border-radius;
   display: flex;
   flex-direction: column;
   height: rem(80);
   justify-content: center;
   margin-right: rem(30);
-  transition: background .8s ease-in-out;
+  transition: background-color .8s ease-in-out;
   width: rem(80);
 
   &:last-of-type {
@@ -17,7 +17,7 @@
   }
 
   &:hover {
-    background: $red;
+    background-color: $red;
     cursor: pointer;
   }
 }

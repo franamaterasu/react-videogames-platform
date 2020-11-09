@@ -2,7 +2,7 @@
 
 .container {
   align-items: center;
-  background: $blue;
+  background-color: $blue;
   display: flex;
   justify-content: space-between;
   padding: rem(10) 5%;
@@ -19,7 +19,7 @@
 }
 
 .nav {
-  background: $white;
+  background-color: $white;
   bottom: rem(-78);
   display: flex;
   justify-content: center;
@@ -30,7 +30,7 @@
   z-index: 9;
 
   @media (min-width: $medium) {
-    background: transparent;
+    background-color: transparent;
     bottom: 0;
     padding: 0;
     position: relative;
@@ -73,7 +73,7 @@
 
     &__circle {
       align-items: center;
-      background: $red;
+      background-color: $red;
       border-radius: 50%;
       color: $white;
       display: flex;

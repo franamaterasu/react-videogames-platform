@@ -63,7 +63,7 @@
   width: 90%;
 
   &::before {
-    background: $red;
+    background-color: $red;
     border-radius: $border-radius;
     content: '';
     display: block;
@@ -98,7 +98,7 @@
 }
 
 .button {
-  background: $red;
+  background-color: $red;
   border-radius: 100%;
   bottom: rem(54);
   fill: $white;
@@ -110,7 +110,7 @@
   z-index: 2;
 
   &:hover {
-    background: darken($red, 5%);
+    background-color: darken($red, 5%);
   }
 
   @media (min-width: $large) {
@@ -124,7 +124,7 @@
 .modal {
   width: 100%;
   height: 100vh;
-  background: rgba($dark, .9);
+  background-color: rgba($dark, .9);
   position: fixed;
   top: 0;
   left: 0;
@@ -213,7 +213,7 @@
   }
 
   &--exit {
-    background: $red;
+    background-color: $red;
     margin-right: 0;
   }
 }

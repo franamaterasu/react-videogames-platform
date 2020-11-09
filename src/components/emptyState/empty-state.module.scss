@@ -29,7 +29,7 @@
 
 .button {
   @extend %button;
-  background: $red;
+  background-color: $red;
   color: $white;
   display: block;
   font-family: $font-family--default;
@@ -40,6 +40,6 @@
   text-decoration: none;
 
   &:hover {
-    background: darken($red, 5%);
+    background-color: darken($red, 5%);
   }
 }
